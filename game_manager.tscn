@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnqmqvyajrxfx"]
+
+[ext_resource type="Script" path="res://game_manager.gd" id="1_r0oxt"]
+[ext_resource type="Texture2D" uid="uid://cdpvasim5w046" path="res://SvalbardOverallMapGrid1000.png" id="2_ejp4c"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_r0oxt")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 849.0
+offset_right = 1594.0
+offset_bottom = 901.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Enter 1, 2, or 3"
+max_length = 1600
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 595.0
+offset_right = 1594.0
+offset_bottom = 839.0
+
+[node name="ColorRect" type="ColorRect" parent="RichTextLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1594.0
+offset_bottom = 244.0
+color = Color(0.102721, 0.0110778, 0.230014, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 282.0
+offset_right = 1340.0
+offset_bottom = 595.0
+texture = ExtResource("2_ejp4c")
+expand_mode = 1
+
+[node name="TypingTimer" type="Timer" parent="."]
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
