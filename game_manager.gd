@@ -9,7 +9,7 @@ var text_dict = {
 	Amidst the beauty, the treacherous terrain serves as a reminder that one fell step could spell an icy grave.  
 	
 	You'll need to get across the glacier, but how?
-	1. Make yor way down the fissures to the coastline
+	1. Make your way down the fissures to the coastline
 	2. Traverse along the glacial ridge and cross the fissues
 	3. Head inland, colder, but hopefully the terrain will be more forgiving
 	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnqmqvyajrxfx"]
+[gd_scene load_steps=4 format=3 uid="uid://bnqmqvyajrxfx"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_r0oxt"]
 [ext_resource type="Texture2D" uid="uid://cdpvasim5w046" path="res://SvalbardOverallMapGrid1000.png" id="2_ejp4c"]
+[ext_resource type="Texture2D" uid="uid://d0qbbyknx3h0" path="res://SvalbardMapDot.png" id="3_r2c3j"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_r0oxt")
@@ -39,7 +40,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Map" type="TextureRect" parent="."]
 offset_left = 282.0
 offset_right = 1340.0
 offset_bottom = 595.0
@@ -47,6 +48,14 @@ texture = ExtResource("2_ejp4c")
 expand_mode = 1
 
 [node name="TypingTimer" type="Timer" parent="."]
+
+[node name="Dot" type="TextureRect" parent="."]
+offset_left = 751.0
+offset_top = 477.0
+offset_right = 1071.0
+offset_bottom = 797.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_r2c3j")
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
