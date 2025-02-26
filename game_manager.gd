@@ -78,8 +78,15 @@ func add_text_line(text_line):
 	$RichTextLabel.newline()
 	for char in text_line:
 		$RichTextLabel.add_text(char)
+		scroll_text_to_bottom()
 		var wait_time = rng.randf_range(0.001, 0.005)
 		await get_tree().create_timer(wait_time).timeout
+	scroll_text_to_bottom()
 	ready_for_input = true
 	
+
+func scroll_text_to_bottom():
+	var lineCount = $RichTextLabel.get_line_count()
+	print(lineCount)
+	$RichTextLabel.scroll_to_line(lineCount)
 	
