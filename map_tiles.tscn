@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwavlj7arfn1f"]
+
+[ext_resource type="Texture2D" uid="uid://bpifq6spxuty5" path="res://MapTile.png" id="1_xdo7h"]
+
+[node name="Maptile" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 760.0
+offset_bottom = 760.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_xdo7h")
