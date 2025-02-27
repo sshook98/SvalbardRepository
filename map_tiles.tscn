@@ -5,7 +5,7 @@
 [node name="Maptile" type="Node2D"]
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-offset_right = 760.0
-offset_bottom = 760.0
+offset_right = 770.0
+offset_bottom = 770.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_xdo7h")

@@ -64,7 +64,7 @@ position = Vector2(542, 79)
 position = Vector2(619, 79)
 
 [node name="Maptile3" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(387, 233)
+position = Vector2(388, 233)
 
 [node name="Maptile4" parent="Map" instance=ExtResource("4_aql72")]
 position = Vector2(619, 233)
@@ -76,7 +76,7 @@ position = Vector2(465, 233)
 position = Vector2(542, 233)
 
 [node name="Maptile7" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(387, 310)
+position = Vector2(388, 310)
 
 [node name="Maptile8" parent="Map" instance=ExtResource("4_aql72")]
 position = Vector2(465, 310)
@@ -100,25 +100,25 @@ position = Vector2(542, 156)
 position = Vector2(465, 156)
 
 [node name="Maptile15" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(387, 156)
+position = Vector2(388, 156)
 
 [node name="Maptile16" parent="Map" instance=ExtResource("4_aql72")]
 position = Vector2(465, 79)
 
 [node name="Maptile17" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(310, 233)
+position = Vector2(311, 233)
 
 [node name="Maptile18" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(310, 156)
+position = Vector2(311, 156)
 
 [node name="Maptile19" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(387, 387)
+position = Vector2(388, 387)
 
 [node name="Maptile20" parent="Map" instance=ExtResource("4_aql72")]
 position = Vector2(311, 79)
 
 [node name="Maptile21" parent="Map" instance=ExtResource("4_aql72")]
-position = Vector2(387, 79)
+position = Vector2(388, 79)
 
 [node name="TypingTimer" type="Timer" parent="."]
 
