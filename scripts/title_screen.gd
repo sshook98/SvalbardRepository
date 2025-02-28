@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event):
 	if event is InputEventKey:
-		get_tree().change_scene_to_file("res://game_manager.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_manager.tscn")
 		
