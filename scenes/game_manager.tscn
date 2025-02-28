@@ -48,77 +48,80 @@ offset_bottom = 595.0
 texture = ExtResource("2_y5oyw")
 expand_mode = 1
 
+[node name="A4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 233)
+
+[node name="A5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 156)
+
+[node name="A6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 79)
+
+[node name="B2" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 387)
+
+[node name="B3" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 310)
+
+[node name="B4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 233)
+
+[node name="B5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 156)
+
+[node name="B6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 79)
+
+[node name="C1" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 464)
+
+[node name="C2" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 387)
+
+[node name="C3" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 310)
+
+[node name="C4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 233)
+
+[node name="C5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 156)
+
+[node name="C6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 79)
+
+[node name="D2" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 387)
+
+[node name="D3" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 310)
+
+[node name="D4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 233)
+
+[node name="D5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 156)
+
+[node name="D6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 79)
+
+[node name="E4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 233)
+
+[node name="E5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 156)
+
+[node name="E6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 79)
+
 [node name="Dot" type="TextureRect" parent="Map"]
 layout_mode = 0
-offset_left = 464.0
+offset_left = 465.0
 offset_top = 464.0
-offset_right = 1234.0
+offset_right = 1235.0
 offset_bottom = 1234.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_5jbsp")
-
-[node name="Maptile" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(542, 79)
-
-[node name="Maptile2" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(619, 79)
-
-[node name="Maptile3" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(388, 233)
-
-[node name="Maptile4" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(619, 233)
-
-[node name="Maptile5" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(465, 233)
-
-[node name="Maptile6" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(542, 233)
-
-[node name="Maptile7" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(388, 310)
-
-[node name="Maptile8" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(465, 310)
-
-[node name="Maptile9" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(542, 310)
-
-[node name="Maptile10" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(542, 387)
-
-[node name="Maptile11" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(465, 387)
-
-[node name="Maptile12" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(619, 156)
-
-[node name="Maptile13" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(542, 156)
-
-[node name="Maptile14" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(465, 156)
-
-[node name="Maptile15" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(388, 156)
-
-[node name="Maptile16" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(465, 79)
-
-[node name="Maptile17" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(311, 233)
-
-[node name="Maptile18" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(311, 156)
-
-[node name="Maptile19" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(388, 387)
-
-[node name="Maptile20" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(311, 79)
-
-[node name="Maptile21" parent="Map" instance=ExtResource("4_ke2fk")]
-position = Vector2(388, 79)
 
 [node name="TypingTimer" type="Timer" parent="."]
 

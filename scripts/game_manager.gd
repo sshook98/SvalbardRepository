@@ -116,7 +116,14 @@ var letter_to_number_dict = {
 }
 
 # Vector2i(col, row)
-var valid_positions = ["C1", "C2", "B3", "C3", "D3"]
+var valid_positions = [
+	"A6","B6","C6","D6","E6",
+	"A5","B5","C5","D5","E5",
+	"A4","B4","C4","D4","E4",
+		 "B3","C3","D3",
+		 "B2","C2","D2",
+		 	  "C1",
+	]
 
 var initial_pos = "C1"
 var player_pos = "C1"
