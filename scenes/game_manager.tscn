@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnqmqvyajrxfx"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_yarko"]
+[ext_resource type="Texture2D" uid="uid://bah3o1e8m7076" path="res://Svalbard Overall Map Grid 1000 Updated.png" id="2_y5oyw"]
+[ext_resource type="Texture2D" uid="uid://d0qbbyknx3h0" path="res://SvalbardMapDot.png" id="3_5jbsp"]
+[ext_resource type="PackedScene" uid="uid://dwavlj7arfn1f" path="res://scenes/map_tiles.tscn" id="4_ke2fk"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_yarko")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 849.0
+offset_right = 1594.0
+offset_bottom = 901.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Enter 1, 2, or 3"
+max_length = 1600
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 595.0
+offset_right = 1594.0
+offset_bottom = 839.0
+
+[node name="ColorRect" type="ColorRect" parent="RichTextLabel"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1594.0
+offset_bottom = 244.0
+color = Color(0.102721, 0.0110778, 0.230014, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Map" type="TextureRect" parent="."]
+offset_left = 272.0
+offset_right = 1330.0
+offset_bottom = 595.0
+texture = ExtResource("2_y5oyw")
+expand_mode = 1
+
+[node name="Dot" type="TextureRect" parent="Map"]
+offset_left = 473.0
+offset_top = 476.0
+offset_right = 793.0
+offset_bottom = 796.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_5jbsp")
+
+[node name="Maptile" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 79)
+
+[node name="Maptile2" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 79)
+
+[node name="Maptile3" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 233)
+
+[node name="Maptile4" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 233)
+
+[node name="Maptile5" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 233)
+
+[node name="Maptile6" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 233)
+
+[node name="Maptile7" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 310)
+
+[node name="Maptile8" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 310)
+
+[node name="Maptile9" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 310)
+
+[node name="Maptile10" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 387)
+
+[node name="Maptile11" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 387)
+
+[node name="Maptile12" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(619, 156)
+
+[node name="Maptile13" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(542, 156)
+
+[node name="Maptile14" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 156)
+
+[node name="Maptile15" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 156)
+
+[node name="Maptile16" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(465, 79)
+
+[node name="Maptile17" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 233)
+
+[node name="Maptile18" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 156)
+
+[node name="Maptile19" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 387)
+
+[node name="Maptile20" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(311, 79)
+
+[node name="Maptile21" parent="Map" instance=ExtResource("4_ke2fk")]
+position = Vector2(388, 79)
+
+[node name="TypingTimer" type="Timer" parent="."]
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
