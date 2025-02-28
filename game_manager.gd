@@ -5,7 +5,7 @@ var last_message_is_help_message = false
 var ready_for_input = true
 var text_dict = {
 	"prompt": """
-	Trudging along the frozen tundra, the immense chasms cast the glacial fissures into brilliant shades of turquose.  
+	Trudging along the frozen tundra, the immense chasms cast the glacial fissures into brilliant shades of turquoise.  
 	Amidst the beauty, the treacherous terrain serves as a reminder that one fell step could spell an icy grave.  
 	
 	You'll need to get across the glacier, but how?
@@ -24,7 +24,7 @@ var text_dict = {
 	Lose 1 food
 	""",
 	"2": """ 
-	You leap across the fissures, looking for sections where they narrow and hanve less sheer drops.  
+	You leap across the fissures, looking for sections where they narrow and have less sheer drops.  
 	
 	After awhile, your legs began to cramp and you have to rest.  
 	
