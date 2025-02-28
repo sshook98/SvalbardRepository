@@ -49,7 +49,6 @@ texture = ExtResource("2_6bwyn")
 expand_mode = 1
 
 [node name="Dot" type="TextureRect" parent="Map"]
-layout_mode = 0
 offset_left = 473.0
 offset_top = 476.0
 offset_right = 793.0

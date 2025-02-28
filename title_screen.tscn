@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://v26p6vr2g1p3"]
+[gd_scene load_steps=3 format=3 uid="uid://v26p6vr2g1p3"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_771a1"]
+[ext_resource type="Script" path="res://globalVars.gd" id="2_safp2"]
 
 [node name="Title_Screen" type="Control"]
 layout_mode = 3
@@ -46,3 +47,6 @@ theme_override_font_sizes/font_size = 25
 text = "Press any key to continue"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_safp2")
