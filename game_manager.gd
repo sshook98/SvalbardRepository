@@ -87,6 +87,6 @@ func add_text_line(text_line):
 
 func scroll_text_to_bottom():
 	var lineCount = $RichTextLabel.get_line_count()
-	print(lineCount)
+	#print(lineCount)
 	$RichTextLabel.scroll_to_line(lineCount)
 	
