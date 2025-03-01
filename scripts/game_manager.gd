@@ -281,6 +281,7 @@ func finish_encounter():
 func reveal_map():
 	var map_tile = $Map.find_child(player_pos)
 	map_tile.hide()
+	$MapRevealSoundEffect.play()
 	
 func is_encounter_complete(encounter):
 	return encounter.encounter_part_index == -1
