@@ -272,9 +272,14 @@ func start_encounter():
 	
 func finish_encounter():
 	# TODO: hide the map tile for the current player_pos
+	reveal_map()
 	can_move = true
 	$RichTextLabel.newline()
 	await add_text_line("It's time to move on")
+	
+func reveal_map():
+	var map_tile = $Map.find_child(player_pos)
+	map_tile.hide()
 	
 	
 func is_encounter_complete(encounter):
@@ -291,7 +296,6 @@ func update_dot_position():
 		var map_tile = $Map.find_child(player_pos)
 		print(str(map_tile) + " updated dot position to") 
 		$Map/Dot.position = map_tile.position
-		map_tile.hide()
 
 func _on_line_edit_text_changed(input_text):
 	if input_text == "":
