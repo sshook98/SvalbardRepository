@@ -107,45 +107,14 @@ var encounterB3_part2 = EncounterPart.new("You come across an outcropping of coa
 var encounterB3 = Encounter.new("B3", [encounterB3_part1, encounterB3_part2])
 
 # Encounter B4
-var encounterB4_part1_option1 = Option.new("Venture over the peaks", "You methodically make your up the mountain ridge until you've crested the ridge.  From up this high, you have a clear view of the regions topology.  You don't spot any new mineral outcrops, but the views from this high are breathtaking.  
-You take a bit to take in the views as you touch up your cartography drawings.  ")
-var encounterB4_part1_option2 = Option.new("Venture through the canyons", "", 1)
-var encounterB4_part1 = EncounterPart.new("You've finished your work for the cartograpy of this area, but to continue on, you'll have make your way through the mountains.  ", [encounterB4_part1_option1, encounterB4_part1_option2])
+var encounterB4_part1_option1 = Option.new("test action 4", "test result 4", 1)
+var encounterB4_part1 = EncounterPart.new("test prompt 3", [encounterB4_part1_option1])
 
-var encounterB4_part2_option1 = Option.new("Turn back", "You return the way you came.  ", 0)
-var encounterB4_part2_option2 = Option.new("Continue through the canyons", "You decide to continue through the canyons.  You trudge on through the deep snow as the path begins to narrow.  ", 2)
-var encounterB4_part2 = EncounterPart.new("You make your way throuh the twisting canyons until you come upon an old campire built in an stone alcove protected from the wind.  You don't see anyone nearby, but the campfire looks like it was put out recently.  ", [encounterB4_part2_option1, encounterB4_part2_option2])
+var encounterB4_part2_option1 = Option.new("test action 5", "test result 5")
+var encounterB4_part2_option2 = Option.new("test action 6", "test result 6")
+var encounterB4_part2 = EncounterPart.new("test prompt 4", [encounterB4_part2_option1, encounterB4_part2_option2])
 
-var encounterB4_part3_option1 = Option.new("Turn back", "You return the way you came.  ", 0)
-var encounterB4_part3_option2 = Option.new("Venture into the frozen cave", "You make your way into the dark cave, ascending slightly towards the distant light source.  You begin to pull yourself up a small ledge when your boot slips on slick rock.  
-
-You tumble backward with a yelp and land on your back.  
-
-As you re-orient yourself, you are suddenly keenly aware of a deep, ragged panting noise coming from ahead in the cave.
-", 3)
-var encounterB4_part3 = EncounterPart.new("The canyon terminantes in a cave with steep cliffs on both sides.  The cave is large enough to walk through and you can see a distant shimmer of light at the far end.  To your left, half-submerged in the snow, an unrecognizeable carcass lies half eaten.  A few scattered bones lay near the cave entrance.  ", [encounterB4_part3_option1, encounterB4_part3_option2])
-
-var encounterB4_part4_option1 = Option.new("Make a dash for the light at the end of the cave", 
-"It's too late for that, the polar bear is upon you in an instant.  
-
-You become part of the circle of life", -1, true)
-var encounterB4_part4_option2 = Option.new("Retreat back the way you came", 
-"It's too late for that, the polar bear is upon you in an instant.  
-
-You become part of the circle of life", -1, true)
-var encounterB4_part4_option3 = Option.new("Try to hide", 
-"It's too late for that, the polar bear is upon you in an instant.  
-
-You become part of the circle of life", -1, true)
-var encounterB4_part4_option4 = Option.new("Try to fight",
-"Yeah, sure, good luck with that.  
-
-One thousand pounds of artic fury crashes into you.  An adult male polar bear, feeling particularly cranky after being awoken from its nap, overpowers you an instant.  
-
-You were, in fact, not built different.  ", -1, true)
-var encounterB4_part4 = EncounterPart.new("The ragged breathing nears and you hear a deep growl.  You have a only a moment to consider your options.  ", [encounterB4_part4_option1, encounterB4_part4_option2, encounterB4_part4_option3, encounterB4_part4_option4])
-
-var encounterB4 = Encounter.new("B4", [encounterB4_part1, encounterB4_part2, encounterB4_part3, encounterB4_part4])
+var encounterB4 = Encounter.new("B4", [encounterB4_part1, encounterB4_part2])
 
 # Encounter B5
 var encounterB5_part1_option1 = Option.new("test action 4", "test result 4", 1)
@@ -193,14 +162,45 @@ var encounterD3_part2 = EncounterPart.new("test prompt 4", [encounterD3_part2_op
 var encounterD3 = Encounter.new("D3", [encounterD3_part1, encounterD3_part2])
 
 # Encounter D4
-var encounterD4_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterD4_part1 = EncounterPart.new("test prompt 3", [encounterD4_part1_option1])
+var encounterD4_part1_option1 = Option.new("Venture over the peaks", "You methodically make your up the mountain ridge until you've crested the ridge.  From up this high, you have a clear view of the regions topology.  You don't spot any new mineral outcrops, but the views from this high are breathtaking.  
+You take a bit to take in the views as you touch up your cartography drawings.  ")
+var encounterD4_part1_option2 = Option.new("Venture through the canyons", "", 1)
+var encounterD4_part1 = EncounterPart.new("You've finished your work for the cartograpy of this area, but to continue on, you'll have make your way through the mountains.  ", [encounterD4_part1_option1, encounterD4_part1_option2])
 
-var encounterD4_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterD4_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterD4_part2 = EncounterPart.new("test prompt 4", [encounterD4_part2_option1, encounterD4_part2_option2])
+var encounterD4_part2_option1 = Option.new("Turn back", "You return the way you came.  ", 0)
+var encounterD4_part2_option2 = Option.new("Continue through the canyons", "You decide to continue through the canyons.  You trudge on through the deep snow as the path begins to narrow.  ", 2)
+var encounterD4_part2 = EncounterPart.new("You make your way throuh the twisting canyons until you come upon an old campire built in an stone alcove protected from the wind.  You don't see anyone nearby, but the campfire looks like it was put out recently.  ", [encounterD4_part2_option1, encounterD4_part2_option2])
 
-var encounterD4 = Encounter.new("D4", [encounterD4_part1, encounterD4_part2])
+var encounterD4_part3_option1 = Option.new("Turn back", "You return the way you came.  ", 0)
+var encounterD4_part3_option2 = Option.new("Venture into the frozen cave", "You make your way into the dark cave, ascending slightly towards the distant light source.  You begin to pull yourself up a small ledge when your boot slips on slick rock.  
+
+You tumble backward with a yelp and land on your back.  
+
+As you re-orient yourself, you are suddenly keenly aware of a deep, ragged panting noise coming from ahead in the cave.
+", 3)
+var encounterD4_part3 = EncounterPart.new("The canyon terminantes in a cave with steep cliffs on both sides.  The cave is large enough to walk through and you can see a distant shimmer of light at the far end.  To your left, half-submerged in the snow, an unrecognizeable carcass lies half eaten.  A few scattered bones lay near the cave entrance.  ", [encounterD4_part3_option1, encounterD4_part3_option2])
+
+var encounterD4_part4_option1 = Option.new("Make a dash for the light at the end of the cave", 
+"It's too late for that, the polar bear is upon you in an instant.  
+
+You become part of the circle of life", -1, true)
+var encounterD4_part4_option2 = Option.new("Retreat back the way you came", 
+"It's too late for that, the polar bear is upon you in an instant.  
+
+You become part of the circle of life", -1, true)
+var encounterD4_part4_option3 = Option.new("Try to hide", 
+"It's too late for that, the polar bear is upon you in an instant.  
+
+You become part of the circle of life", -1, true)
+var encounterD4_part4_option4 = Option.new("Try to fight",
+"Yeah, sure, good luck with that.  
+
+One thousand pounds of artic fury crashes into you.  An adult male polar bear, feeling particularly cranky after being awoken from its nap, overpowers you an instant.  
+
+You were, in fact, not built different.  ", -1, true)
+var encounterD4_part4 = EncounterPart.new("The ragged breathing nears and you hear a deep growl.  You have a only a moment to consider your options.  ", [encounterD4_part4_option1, encounterD4_part4_option2, encounterD4_part4_option3, encounterD4_part4_option4])
+
+var encounterD4 = Encounter.new("D4", [encounterD4_part1, encounterD4_part2, encounterD4_part3, encounterD4_part4])
 
 # Encounter D5
 var encounterD5_part1_option1 = Option.new("test action 4", "test result 4", 1)
