@@ -7,11 +7,11 @@ var can_move = true
 
 
 # Encounter C1
-var encounterC1_part1_option1 = Option.new("Get started", "You venture inland, pausing occasionally to sketch our the nearby topology and make note of any interesting geological features", 1)
+var encounterC1_part1_option1 = Option.new("Get started", "You venture inland, pausing occasionally to sketch out the nearby topology and make note of any interesting geological features", 1)
 var encounterC1_part1 = EncounterPart.new("It is a clear day and sunny day as you disembark from the Endurance having traveled from Norway to Svalbard in a short five days.  The Store Norske Spitsbergen Kulkompani (SNSK) has hired you to survey Spitsbergen, the largest island of the Svalbard Archipelago.  The SNSK plans to expand its mining operations after its recent acquisition of the American Arctic Coal Company", [encounterC1_part1_option1])
 
 var encounterC1_part2_option1 = Option.new("Make camp for the night", "You find a shady spot beneath a rocky outcropping.  At this time of year, the sun doesn't set in Svalbard, so you take stock of your supplies and prepare to sleep under the midnight sun.  You've brought with you food and fuel, enough to last for the whole expedition, so long as things proceed as scheduled.  ")
-var encounterC1_part2 = EncounterPart.new("You spend the day taking samples and sketching.  In the mid afternoon, you a far off column of smoke.  It could be from another explorer or perhaps a mining camp, but the captain also warned you about reports of bandits", [encounterC1_part2_option1])
+var encounterC1_part2 = EncounterPart.new("You spend the day taking samples and sketching.  In the mid afternoon, you spot a far off column of smoke.  It could be from another explorer or perhaps a mining camp, but the captain also warned you about reports of bandits", [encounterC1_part2_option1])
 
 var encounterC1 = Encounter.new("C1", [encounterC1_part1, encounterC1_part2])
 
@@ -223,7 +223,6 @@ var letter_to_number_dict = {
 	3: "C",
 	4: "D",
 	5: "E",
-	6: "F",
 }
 
 # Vector2i(col, row)
