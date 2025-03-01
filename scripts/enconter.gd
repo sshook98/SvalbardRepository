@@ -11,4 +11,3 @@ func _init(_map_pos: String, _encounter_parts: Array[EncounterPart]):
 	map_pos = _map_pos
 	encounter_parts = _encounter_parts
 	encounter_part_index = 0
-
