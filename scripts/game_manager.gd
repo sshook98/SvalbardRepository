@@ -127,12 +127,17 @@ var encounterB5_part2 = EncounterPart.new("test prompt 4", [encounterB5_part2_op
 var encounterB5 = Encounter.new("B5", [encounterB5_part1, encounterB5_part2])
 
 # Encounter B6
-var encounterB6_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB6_part1 = EncounterPart.new("test prompt 3", [encounterB6_part1_option1])
+var encounterB6_part1_option1 = Option.new("Search for walruses down the coast", "You look for a path down the glacier to the coast, carefully making your way across the icy crevices until you reach a less steep portion of the coastal cliffs.  You make your way down the rocky path until you reach the frigid waters.", 1)
+var encounterB6_part1_option2 = Option.new("Stick to highlands - whatever animals or resources might be down the coast aren't worth risking your life", "You continue along the highlands, avoiding the glacial crevices.  You don't find any animals")
+var encounterB6_part1 = EncounterPart.new("The glaciers of northern Splitsberg are breathtaking with cascading shades of blue and turqoise.  The rocky cliffsides cast dramatic shadows over the glacial fissures.  The path down to the coast is a bit treacherous, but you may be able to find a pod of walruses resting on ice flows below.  ", [encounterB6_part1_option1])
 
-var encounterB6_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB6_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB6_part2 = EncounterPart.new("test prompt 4", [encounterB6_part2_option1, encounterB6_part2_option2])
+var encounterB6_part2_option1 = Option.new("Swim out to the ice flows to pet a walrus", "Against your better judgement, you leap into the frigid waters and try to swim out to the walruses.  
+
+This goes quite poorly.  
+
+In the icy water, your body quickly begins to shut down and you lose consciousness.  ", -1, true)
+var encounterB6_part2_option2 = Option.new("Admire the walruses from a distance", "You spend some time resting and drawing sketches of the glacier and walruses.  As you're preparing for the climb back up the glacier, a family of humpback whales breach amongst the ice flows.  ")
+var encounterB6_part2 = EncounterPart.new("After considerable effort, you've reached the waters below the glacier.  After a bit more searching, you find a large pod of over a hundred walruses lounging on the rocky shore and the ice flows", [encounterB6_part2_option1, encounterB6_part2_option2])
 
 var encounterB6 = Encounter.new("B6", [encounterB6_part1, encounterB6_part2])
 
@@ -218,12 +223,14 @@ var letter_to_number_dict = {
 	"C": 3,
 	"D": 4,
 	"E": 5,
+	"F": 6,
 	
 	1: "A",
 	2: "B",
 	3: "C",
 	4: "D",
 	5: "E",
+	6: "F"
 }
 
 # Vector2i(col, row)
@@ -325,7 +332,11 @@ func _on_line_edit_text_changed(input_text):
 			print("switching from " + str(current_encounter.encounter_part_index) + " to " + str(option.next_encounter_part_index))
 			current_encounter.encounter_part_index = option.next_encounter_part_index
 			last_message_is_help_message = false
-			if current_encounter.encounter_part_index != -1: 
+			if option.results_in_death == true:
+				await get_tree().create_timer(3).timeout
+				get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
+				return
+			elif current_encounter.encounter_part_index != -1: 
 				await get_tree().create_timer(1).timeout
 				await start_encounter()
 		elif last_message_is_help_message == false:
