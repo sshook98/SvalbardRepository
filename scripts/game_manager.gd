@@ -223,12 +223,16 @@ var encounterD6_part2 = EncounterPart.new("test prompt 4", [encounterD6_part2_op
 var encounterD6 = Encounter.new("D6", [encounterD6_part1, encounterD6_part2])
 
 # Encounter E4
-var encounterE4_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterE4_part1 = EncounterPart.new("test prompt 3", [encounterE4_part1_option1])
+var encounterE4_part1_option1 = Option.new("Investiate the balloon", "You approach the balloon and examine the area", 1)
+var encounterE4_part1_option2 = Option.new("Move on, you have work to do", "You leave the balloon behind without giving it another thought")
+var encounterE4_part1 = EncounterPart.new("You spot a strange white shape silloetted against the rocks aways off.  Confident that it is too large to be a polar bear, you decide to take a closer look and discover a balloon attached to a large basket.  ", [encounterE4_part1_option1, encounterE4_part1_option2])
 
-var encounterE4_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterE4_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterE4_part2 = EncounterPart.new("test prompt 4", [encounterE4_part2_option1, encounterE4_part2_option2])
+var encounterE4_part2_option1 = Option.new("Investiate the journal", "Contained within the journal is the account of one Salomon August Andrée and his compatriots Knut Frænkel and Nils Strindberg as they attempted to sail their newly manufacted hydrogen balloon, the Örnen, from Svalbard over the geographic north pole to reach either Canada or Russia.  
+
+From the looks of it, their expedition didn't go very well.  
+")
+var encounterE4_part2_option2 = Option.new("Move on, you shouldn't get distracted", "test result 6")
+var encounterE4_part2 = EncounterPart.new("The baloon shows considerable wear and tear indicating that it has been exposed to the elements for quite awhile.  Within the basket, you find a few empty bags and a tathered journal, but there is no sign of burner or any fuel.  ", [encounterE4_part2_option1, encounterE4_part2_option2])
 
 var encounterE4 = Encounter.new("E4", [encounterE4_part1, encounterE4_part2])
 
