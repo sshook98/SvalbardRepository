@@ -276,11 +276,13 @@ func finish_encounter():
 	can_move = true
 	$RichTextLabel.newline()
 	await add_text_line("It's time to move on")
+	if are_all_enconters_complete():
+		get_tree().change_scene_to_file("res://scenes/VictoryScreen.tscn")
+		
 	
 func reveal_map():
 	var map_tile = $Map.find_child(player_pos)
 	map_tile.hide()
-	
 	
 func is_encounter_complete(encounter):
 	return encounter.encounter_part_index == -1
