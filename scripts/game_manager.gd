@@ -5,70 +5,6 @@ var last_message_is_help_message = false
 var ready_for_input = true
 var can_move = true
 
-#var encounter_1_part_1 = {
-	#"image_path": "",
-	#"prompt": """
-	#Trudging along the frozen tundra, the immense chasms cast the glacial fissures into brilliant shades of turquose.  
-	#Amidst the beauty, the treacherous terrain serves as a reminder that one fell step could spell an icy grave.  
-	#
-	#You'll need to get across the glacier, but how?
-	#1. Make your way down the fissures to the coastline
-	#2. Traverse along the glacial ridge and cross the fissues
-	#3. Head inland, colder, but hopefully the terrain will be more forgiving
-	#
-	#""",
-	#"1": """
-	#You make your way down the fissures to the coastline. 
-	#
-	#A polar bear is returning from an unnsuccessful hunt.  
-	#
-	#It looks pretty tired, so you toss him some of your food, just to make sure it doesn't decide to follow you.
-	#
-	#Lose 1 food
-	#""",
-	#"2": """ 
-	#You leap across the fissures, looking for sections where they narrow and hanve less sheer drops.  
-	#
-	#After awhile, your legs began to cramp and you have to rest.  
-	#
-	#Lose 1 day of time.  
-	#""",
-	#"3": """
-	#You head inland and up into the hills.   
-	#
-	#Lose 1 fuel
-	#""",
-#}
-#var encounter_1_part_2 = {
-	#"image_path": "",
-	#"prompt": """
-	#test prompt - you need to do the thing
-	#
-	#but the thing is...
-	#
-	#there is a problem
-	#
-	#so what do you do?
-	#
-	#option 1: do action 1
-	#option 2: do action 2
-	#option 3: do action 3
-	#
-	#""",
-	#"1": "result of action 1",
-	#"nextEncounter1": "",
-	#"2": "result of action 2",
-	#"nextEncounter2": "",
-	#"3": "result of action 3",
-	#"nextEnconter3": "",
-#}
-
-#var encounter1 = {
-	#"map_pos": "C1",
-	#"id": 1,
-	#"encounter_part_index": 0,
-	#"encounter_parts": [encounter_1_part_1, encounter_1_part_2],
-#}
 
 # Encounter C1
 var encounter1_part1_option1 = Option.new("test action 1", "test result 1", 1)
@@ -109,7 +45,7 @@ var letter_to_number_dict = {
 
 # Vector2i(col, row)
 var valid_positions = [
-	"A6","B6","C6","D6","E6",
+		 "B6","C6","D6",
 	"A5","B5","C5","D5","E5",
 	"A4","B4","C4","D4","E4",
 		 "B3","C3","D3",
@@ -138,14 +74,15 @@ func find_starting_encounter():
 	return starting_encounter
 	
 func start_encounter():
-	clear_text()
 	var encounter_part = get_current_encounter_part()
 	await add_text_line(encounter_part.prompt)
 	
+	var index = 1
 	var options = encounter_part.options
 	for option in options:
 		await get_tree().create_timer(0.1).timeout
-		await add_text_line(option.action)
+		await add_text_line(str(index) + ". " + option.action)
+		index = index + 1
 	
 	can_move = false
 	
@@ -157,22 +94,20 @@ func finish_encounter():
 	
 	
 func is_encounter_complete(encounter):
-	return encounter.encounter_part_index >= encounter.encounter_parts.size()
+	return encounter.encounter_part_index == -1
 	
 func are_all_enconters_complete():
 	for encount in encounters:
 		if not is_encounter_complete(encount):
 			return false
 	return true
-	
-func _unhandled_input(event):
-	if event is InputEventKey and event.keycode == KEY_P:
-		update_dot_position()
-		
+
+
 func update_dot_position():
 		var map_tile = $Map.find_child(player_pos)
 		print(str(map_tile) + " updated dot position to") 
 		$Map/Dot.position = map_tile.position
+		map_tile.hide()
 
 func _on_line_edit_text_changed(input_text):
 	if input_text == "":
@@ -198,8 +133,10 @@ func _on_line_edit_text_changed(input_text):
 		if int_input >= 0 and int_input < options.size():
 			var option = encounter_part.options[int_input]
 			await add_text_line(option.result)
-			current_encounter.encounter_part_index = current_encounter.encounter_part_index + 1
+			current_encounter.encounter_part_index = option.next_encounter_part_index
 			last_message_is_help_message = false
+			await get_tree().create_timer(1).timeout
+			await start_encounter()
 		elif last_message_is_help_message == false:
 			await add_text_line("Enter a number between 1 and " + str(options.size()))
 			last_message_is_help_message = true

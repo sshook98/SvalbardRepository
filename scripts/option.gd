@@ -10,4 +10,4 @@ var result: String
 func _init(_action: String, _result: String, _next_encounter_part_index: int = -1):
 	next_encounter_part_index = _next_encounter_part_index
 	result = _result
-
+	action = _action
