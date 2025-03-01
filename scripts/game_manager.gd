@@ -26,12 +26,13 @@ var encounterC2_part2 = EncounterPart.new("test prompt 4", [encounterC2_part2_op
 var encounterC2 = Encounter.new("C2", [encounterC2_part1, encounterC2_part2])
 
 # Encounter C3
-var encounterC3_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterC3_part1 = EncounterPart.new("test prompt 3", [encounterC3_part1_option1])
+var encounterC3_part1_option1 = Option.new("Explore the outskirts", "You explore the outskirts of the Longyearbyen looking for signs of resources buried under the ice and stone.  ", 1)
+var encounterC3_part1_option2 = Option.new("Venture into to town", " You venture into town and take rest a bit before heading on your way again.  ")
+var encounterC3_part1 = EncounterPart.new("You approach Longyearbyen, one of the only permanent settlements in Svalbard.  This area has already been explored pretty thoroughly so it may be good to take some time to rest in town, but the resources here are also some of the richest on the island.  It'd may be good to take another look.  ", [encounterC3_part1_option1, encounterC3_part1_option2])
 
-var encounterC3_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterC3_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterC3_part2 = EncounterPart.new("test prompt 4", [encounterC3_part2_option1, encounterC3_part2_option2])
+var encounterC3_part2_option1 = Option.new("Be thorough, catalog all of the outcroppings in the area and take some samples as well", "You spend the next two days making through topological maps of the area and documenting the locations of each coal outcropping you find.  You take soil samples from some of the glacial rivers until you're nearly out of sample bags.  ")
+var encounterC3_part2_option2 = Option.new("Be quick, Splitsbergen is a large place and the SNSK probably already has good data on this area.  ", "You make some quick sketches of this area's topology to compare against the SNSK's data later.  ")
+var encounterC3_part2 = EncounterPart.new("You come across an outcropping of coal in the hills near Longyearbyen.  There may be more outcroppings nearby to indicate a rich vein.  You could spend some time to sketch especially detailed topology of this area, but it will take some time", [encounterC3_part2_option1, encounterC3_part2_option2])
 
 var encounterC3 = Encounter.new("C3", [encounterC3_part1, encounterC3_part2])
 
@@ -96,13 +97,12 @@ var encounterB2_part2 = EncounterPart.new("test prompt 4", [encounterB2_part2_op
 var encounterB2 = Encounter.new("B2", [encounterB2_part1, encounterB2_part2])
 
 # Encounter B3
-var encounterB3_part1_option1 = Option.new("Explore the outskirts", "You explore the outskirts of the Longyearbyen looking for signs of resources buried under the ice and stone.  ", 1)
-var encounterB3_part1_option2 = Option.new("Venture into to town", " You venture into town and take rest a bit before heading on your way again.  ")
-var encounterB3_part1 = EncounterPart.new("You approach Longyearbyen, one of the only permanent settlements in Svalbard.  This area has already been explored pretty thoroughly so it may be good to take some time to rest in town, but the resources here are also some of the richest on the island.  It'd may be good to take another look.  ", [encounterB3_part1_option1, encounterB3_part1_option2])
+var encounterB3_part1_option1 = Option.new("test action 4", "test result 4", 1)
+var encounterB3_part1 = EncounterPart.new("test prompt 3", [encounterB3_part1_option1])
 
-var encounterB3_part2_option1 = Option.new("Be thorough, catalog all of the outcroppings in the area and take some samples as well", "You spend the next two days making through topological maps of the area and documenting the locations of each coal outcropping you find.  You take soil samples from some of the glacial rivers until you're nearly out of sample bags.  ")
-var encounterB3_part2_option2 = Option.new("Be quick, Splitsbergen is a large place and the SNSK probably already has good data on this area.  ", "You make some quick sketches of this area's topology to compare against the SNSK's data later.  ")
-var encounterB3_part2 = EncounterPart.new("You come across an outcropping of coal in the hills near Longyearbyen.  There may be more outcroppings nearby to indicate a rich vein.  You could spend some time to sketch especially detailed topology of this area, but it will take some time", [encounterB3_part2_option1, encounterB3_part2_option2])
+var encounterB3_part2_option1 = Option.new("test action 5", "test result 5")
+var encounterB3_part2_option2 = Option.new("test action 6", "test result 6")
+var encounterB3_part2 = EncounterPart.new("test prompt 4", [encounterB3_part2_option1, encounterB3_part2_option2])
 
 var encounterB3 = Encounter.new("B3", [encounterB3_part1, encounterB3_part2])
 
