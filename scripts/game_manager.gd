@@ -93,26 +93,18 @@ var encounters = [encounter1, encounter2]
 var current_encounter = encounters[0]
 
 var letter_to_number_dict = {
-	"~": -1,
 	"A": 1,
 	"B": 2,
 	"C": 3,
 	"D": 4,
 	"E": 5,
-	"F": 6,
-	"G": 7,
-	"H": 8,
 	
-	0: "~",
 	1: "A",
 	2: "B",
 	3: "C",
 	4: "D",
 	5: "E",
 	6: "F",
-	7: "G",
-	8: "H",
-	9: "~"
 }
 
 # Vector2i(col, row)
@@ -137,10 +129,7 @@ func _ready():
 	current_encounter = find_starting_encounter()
 	start_encounter()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
+
 func find_starting_encounter():
 	var starting_encounter = encounters[0]
 	for encounter in encounters:
@@ -178,8 +167,12 @@ func are_all_enconters_complete():
 	
 func _unhandled_input(event):
 	if event is InputEventKey and event.keycode == KEY_P:
-		clear_text()
-	
+		update_dot_position()
+		
+func update_dot_position():
+		var map_tile = $Map.find_child(player_pos)
+		print(str(map_tile) + " updated dot position to") 
+		$Map/Dot.position = map_tile.position
 
 func _on_line_edit_text_changed(input_text):
 	if input_text == "":
@@ -233,16 +226,21 @@ func scroll_text_to_bottom():
 	$RichTextLabel.scroll_to_line(lineCount)
 	
 func move_up():
+	print("trying to move up from " + str(player_pos))
 	await try_move(Vector2i(0, 1))
 
 func move_down():
+	print("trying to move down from " + str(player_pos))
 	await try_move(Vector2i(0, -1))
 
 func move_left():
+	print("trying to move left from " + str(player_pos))
 	await try_move(Vector2i(-1, 0))
 	
 func move_right():
+	print("trying to move right from " + str(player_pos))
 	await try_move(Vector2i(1, 0))
+
 	
 func try_move(pos_change):
 	var old_pos = player_pos
@@ -253,6 +251,7 @@ func try_move(pos_change):
 		player_pos = new_pos_name
 		print("Moving from", old_pos, " to ", player_pos)
 		await add_text_line("Moving from " + str(old_pos) + " to " + str(new_pos_name))
+		update_dot_position()
 		# TODO: update the red dot positioning
 	else:
 		await add_text_line("Cannot move to " + str(new_pos_name))
@@ -262,16 +261,22 @@ func is_position_valid(pos):
 	return valid_positions.has(pos)
 	
 func position_name_to_vector(pos_name): 
-	var col = int(pos_name[0])
+	var col = letter_to_number_dict[pos_name[0]]
 	var row = int(pos_name[1])
-	return Vector2i(col, row)
+	var result = Vector2i(col, row)
+	print("Converted " + str(pos_name) + " to " + str(result))
+	return result
 	
 func position_vector_to_name(pos_vector: Vector2i):
 	if letter_to_number_dict.has(pos_vector.x) and letter_to_number_dict.has(pos_vector.y):
 		var col = letter_to_number_dict[pos_vector.x]
-		var row = letter_to_number_dict[pos_vector.y]
+		var row = str(pos_vector.y)
+		var result = col + row
+		print("Converted " + str(pos_vector) + " to " + str(result))
+		return result
 	else:
-		return Vector2i(-1, -1)
+		#returning non valid map position
+		return ":(" 
 
 func get_current_encounter_part():
 	var encounter_part_index = current_encounter.encounter_part_index
