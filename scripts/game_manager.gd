@@ -7,12 +7,11 @@ var can_move = true
 
 
 # Encounter C1
-var encounterC1_part1_option1 = Option.new("test action 1", "test result 1", 1)
-var encounterC1_part1 = EncounterPart.new("test prompt 1", [encounterC1_part1_option1])
+var encounterC1_part1_option1 = Option.new("Get started", "You venture inland, pausing occasionally to sketch our the nearby topology and make note of any interesting geological features", 1)
+var encounterC1_part1 = EncounterPart.new("It is a clear day and sunny day as you disembark from the Endurance having traveled from Norway to Svalbard in a short five days.  The Store Norske Spitsbergen Kulkompani (SNSK) has hired you to survey Spitsbergen, the largest island of the Svalbard Archipelago.  The SNSK plans to expand its mining operations after its recent acquisition of the American Arctic Coal Company", [encounterC1_part1_option1])
 
-var encounterC1_part2_option1 = Option.new("test action 2", "test result 2")
-var encounterC1_part2_option2 = Option.new("test action 3", "test result 3")
-var encounterC1_part2 = EncounterPart.new("test prompt 2", [encounterC1_part2_option1, encounterC1_part2_option2])
+var encounterC1_part2_option1 = Option.new("Make camp for the night", "You find a shady spot beneath a rocky outcropping.  At this time of year, the sun doesn't set in Svalbard, so you take stock of your supplies and prepare to sleep under the midnight sun.  You've brought with you food and fuel, enough to last for the whole expedition, so long as things proceed as scheduled.  ")
+var encounterC1_part2 = EncounterPart.new("You spend the day taking samples and sketching.  In the mid afternoon, you a far off column of smoke.  It could be from another explorer or perhaps a mining camp, but the captain also warned you about reports of bandits", [encounterC1_part2_option1])
 
 var encounterC1 = Encounter.new("C1", [encounterC1_part1, encounterC1_part2])
 
@@ -340,6 +339,7 @@ func _on_line_edit_text_changed(input_text):
 	
 func add_text_line(text_line):
 	ready_for_input = false
+	$TypingSoundEffect.play()
 	$RichTextLabel.newline()
 	for letter in text_line:
 		$RichTextLabel.add_text(letter)
@@ -347,6 +347,7 @@ func add_text_line(text_line):
 		var wait_time = rng.randf_range(0.001, 0.005)
 		await get_tree().create_timer(wait_time).timeout
 	scroll_text_to_bottom()
+	$TypingSoundEffect.stop()
 	ready_for_input = true
 	
 

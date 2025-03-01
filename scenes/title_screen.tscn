@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://v26p6vr2g1p3"]
 
-[ext_resource type="Script" path="res://scripts/globalVars.gd" id="2_safp2"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_opgb0"]
+[ext_resource type="Script" path="res://scripts/globalVars.gd" id="2_safp2"]
 
 [node name="Title_Screen" type="Control"]
 layout_mode = 3
