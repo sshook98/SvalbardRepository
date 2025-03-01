@@ -77,14 +77,29 @@ var encounterA4_part2 = EncounterPart.new("test prompt 4", [encounterA4_part2_op
 var encounterA4 = Encounter.new("A4", [encounterA4_part1, encounterA4_part2])
 
 # Encounter A5
-var encounterA5_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterA5_part1 = EncounterPart.new("test prompt 3", [encounterA5_part1_option1])
+var encounterA5_part1_option1 = Option.new("Setup your tent", "You set your tent up immediately not waiting for the snow to start", 1)
+var encounterA5_part1_option2 = Option.new("Search for a cave to shelter in", "You trek up into the hills in search of a cave or an alcove to take shelter from the snow", 2)
+var encounterA5_part1 = EncounterPart.new("As you venture out towards the northwest reaches of Splitsbergen, the weather suddenly takes a turn for the worse.  Heavy storm clouds approach from the south and soon, the whole peninsula will have a fresh coat of snow.", [encounterA5_part1_option1, encounterA5_part1_option2])
 
-var encounterA5_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterA5_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterA5_part2 = EncounterPart.new("test prompt 4", [encounterA5_part2_option1, encounterA5_part2_option2])
+var encounterA5_part2_option1 = Option.new("Ride out the storm inside the tent", "The snow continues piling up, but you remain warm and comfy inside your tent as you begin to nod off", 3)
+var encounterA5_part2_option2 = Option.new("Dig through the snow to check outside", "You spend some time to dig a trench through the newly fallen snow until you reach the surface.  You find that the snow has nearly stopped and you should be good to venture out tomorrow morning.  ")
+var encounterA5_part2 = EncounterPart.new("As the snow begins, you hunker down in your tent.  Hours pass and snow begins to form a large drift against the side of your tent, blocking your vision", [encounterA5_part2_option1, encounterA5_part2_option2])
 
-var encounterA5 = Encounter.new("A5", [encounterA5_part1, encounterA5_part2])
+var encounterA5_part3_option1 = Option.new("Setup your tent inside the cave", "You set your tent up inside the cave as the snow begins in earnest.  By the time your setup, there's several inches of fresh powder.  You ride out the storm in modest comfort and head out again in the morning.  ")
+var encounterA5_part3 = EncounterPart.new("You find a shallow cave to take shelter in.  The cave won't protect you entirely, but it will atleast provide some cover from the wind and snow", [encounterA5_part3_option1])
+
+var encounterA5_part4_option1 = Option.new("Dig a tunnel through the snow", "You quickly dig a tunnel through the snow as your headeache grows.  You manage to make it to the surface in time to find that the snow has stopped.  
+
+That was close, a little longer and may have suffocated in your tent.  
+
+You rest until morning and prepare to head out once more.  ")
+var encounterA5_part4_option2 = Option.new("Rest until the storm passes", "You lay back down on your sleeping bag, hoping you'll feel better in the morning.  
+
+A short time later, your consciousness fades as you succumb to carbon monoxide poisoning.", -1, true)
+var encounterA5_part4 = EncounterPart.new("You awake with a headache, slight nausea and strained breathering.  The snow has piled up around your tent so no light permeates insides.  ", [encounterA5_part4_option1, encounterA5_part4_option2])
+
+
+var encounterA5 = Encounter.new("A5", [encounterA5_part1, encounterA5_part2, encounterA5_part3, encounterA5_part4])
 
 # Encounter B2
 var encounterB2_part1_option1 = Option.new("test action 4", "test result 4", 1)
