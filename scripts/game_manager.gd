@@ -169,12 +169,12 @@ var encounterB5_part2 = EncounterPart.new("test prompt 4", [encounterB5_part2_op
 var encounterB5 = Encounter.new("B5", [encounterB5_part1, encounterB5_part2])
 
 # Encounter B6
-var encounterB6_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB6_part1 = EncounterPart.new("test prompt 3", [encounterB6_part1_option1])
+var encounterB6_part1_option1 = Option.new("Test the water temperature", "You find that the temperature is quite suitable for swimming.", 1)
+var encounterB6_part1_option2 = Option.new("Keep moving, no time for a swim.", "After surveying the size and location of the spring, you continue on through the valley. ")
+var encounterB6_part1 = EncounterPart.new("As you wander through a snowy valley, you come across a spring emitting hot, rising steam. You have learned of geothermal springs, but this is your first time experiencing them on an expedition. ", [encounterB6_part1_option1, encounterB6_part1_option2])
 
-var encounterB6_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB6_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB6_part2 = EncounterPart.new("test prompt 4", [encounterB6_part2_option1, encounterB6_part2_option2])
+var encounterB6_part2_option1 = Option.new("May as well get in, right? For research purposes, of course.", "The water is soothing and you feel incredibly relaxed. After spending days in the unforgiving wilderness, this is exactly what you needed. After a well needed rest, you survey the size and location of the spring and continue on through the valley. ")
+var encounterB6_part2 = EncounterPart.new("", [encounterB6_part2_option1])
 
 var encounterB6 = Encounter.new("B6", [encounterB6_part1, encounterB6_part2])
 
