@@ -4,6 +4,8 @@ var ready_for_input = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if GlobalVars.cause_of_death != "":
+		self.find_child(GlobalVars.cause_of_death).show()
 	await get_tree().create_timer(3).timeout
 	ready_for_input = true
 

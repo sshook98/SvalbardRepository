@@ -5,6 +5,8 @@ extends Node
 static var days = 0
 static var food = 10
 static var fuel = 10
+static var cause_of_death = ""
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

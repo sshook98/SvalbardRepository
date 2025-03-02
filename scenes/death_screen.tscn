@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ef0yficsnr7b"]
+[gd_scene load_steps=3 format=3 uid="uid://bfydkmqhnis8s"]
 
 [ext_resource type="Script" path="res://scripts/death_screen.gd" id="1_epx14"]
+[ext_resource type="Texture2D" uid="uid://cm2ljoqvlw2yv" path="res://bear.png" id="2_tylai"]
 
 [node name="Death_Screen" type="Control"]
 layout_mode = 3
@@ -42,3 +43,9 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 text = "Press any key to try again"
+
+[node name="polar_bear" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(786, 201)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_tylai")

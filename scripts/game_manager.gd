@@ -223,21 +223,21 @@ var encounterD4_part3 = EncounterPart.new("The canyon terminantes in a cave with
 var encounterD4_part4_option1 = Option.new("Make a dash for the light at the end of the cave", 
 "It's too late for that, the polar bear is upon you in an instant.  
 
-You become part of the circle of life", -1, true)
+You become part of the circle of life", -1, true, "polar_bear")
 var encounterD4_part4_option2 = Option.new("Retreat back the way you came", 
 "It's too late for that, the polar bear is upon you in an instant.  
 
-You become part of the circle of life", -1, true)
+You become part of the circle of life", -1, true, "polar_bear")
 var encounterD4_part4_option3 = Option.new("Try to hide", 
 "It's too late for that, the polar bear is upon you in an instant.  
 
-You become part of the circle of life", -1, true)
+You become part of the circle of life", -1, true, "polar_bear")
 var encounterD4_part4_option4 = Option.new("Try to fight",
 "Yeah, sure, good luck with that.  
 
 One thousand pounds of artic fury crashes into you.  An adult male polar bear, feeling particularly cranky after being awoken from its nap, overpowers you an instant.  
 
-You were, in fact, not built different.  ", -1, true)
+You were, in fact, not built different.  ", -1, true, "polar_bear")
 var encounterD4_part4 = EncounterPart.new("The ragged breathing nears and you hear a deep growl.  You have a only a moment to consider your options.  ", [encounterD4_part4_option1, encounterD4_part4_option2, encounterD4_part4_option3, encounterD4_part4_option4])
 
 var encounterD4 = Encounter.new("D4", [encounterD4_part1, encounterD4_part2, encounterD4_part3, encounterD4_part4])
@@ -318,8 +318,8 @@ var valid_positions = [
 		 	  "C1",
 	]
 
-var initial_pos = "C1"
-var player_pos = "C1"
+var initial_pos = "D4"
+var player_pos = "D4"
 
 
 #meowdy
@@ -328,6 +328,7 @@ var player_pos = "C1"
 func _ready():
 	print("Valid positons: ", valid_positions)
 	current_encounter = get_next_encounter()
+	GlobalVars.cause_of_death = ""
 	start_encounter()
 
 
@@ -410,6 +411,7 @@ func _on_line_edit_text_changed(input_text):
 			last_message_is_help_message = false
 			if option.results_in_death == true:
 				await get_tree().create_timer(3).timeout
+				GlobalVars.cause_of_death = option.cause_of_death
 				get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
 				return
 			elif current_encounter.encounter_part_index != -1: 
