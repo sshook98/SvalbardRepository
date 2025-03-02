@@ -318,8 +318,8 @@ var valid_positions = [
 		 	  "C1",
 	]
 
-var initial_pos = "D4"
-var player_pos = "D4"
+var initial_pos = "C1"
+var player_pos = "C1"
 
 
 #meowdy
