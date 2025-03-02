@@ -159,27 +159,22 @@ var encounterB4_part2 = EncounterPart.new("test prompt 4", [encounterB4_part2_op
 var encounterB4 = Encounter.new("B4", [encounterB4_part1, encounterB4_part2])
 
 # Encounter B5
+var encounterB5_part1_option1 = Option.new("test action 4", "test result 4", 1)
+var encounterB5_part1 = EncounterPart.new("test prompt 3", [encounterB5_part1_option1])
+
+var encounterB5_part2_option1 = Option.new("test action 5", "test result 5")
+var encounterB5_part2_option2 = Option.new("test action 6", "test result 6")
+var encounterB5_part2 = EncounterPart.new("test prompt 4", [encounterB5_part2_option1, encounterB5_part2_option2])
+
+var encounterB5 = Encounter.new("B5", [encounterB5_part1, encounterB5_part2])
+
+# Encounter B6
 var encounterB6_part1_option1 = Option.new("test action 4", "test result 4", 1)
 var encounterB6_part1 = EncounterPart.new("test prompt 3", [encounterB6_part1_option1])
 
 var encounterB6_part2_option1 = Option.new("test action 5", "test result 5")
 var encounterB6_part2_option2 = Option.new("test action 6", "test result 6")
 var encounterB6_part2 = EncounterPart.new("test prompt 4", [encounterB6_part2_option1, encounterB6_part2_option2])
-
-var encounterB6 = Encounter.new("B6", [encounterB6_part1, encounterB6_part2])
-
-# Encounter B6
-var encounterB6_part1_option1 = Option.new("Search for walruses down the coast", "You look for a path down the glacier to the coast, carefully making your way across the icy crevices until you reach a less steep portion of the coastal cliffs.  You make your way down the rocky path until you reach the frigid waters.", 1)
-var encounterB6_part1_option2 = Option.new("Stick to highlands - whatever animals or resources might be down the coast aren't worth risking your life", "You continue along the highlands, avoiding the glacial crevices.  You don't find any animals")
-var encounterB6_part1 = EncounterPart.new("The glaciers of northern Splitsberg are breathtaking with cascading shades of blue and turqoise.  The rocky cliffsides cast dramatic shadows over the glacial fissures.  The path down to the coast is a bit treacherous, but you may be able to find a pod of walruses resting on ice flows below.  ", [encounterB6_part1_option1, encounterB6_part1_option2])
-
-var encounterB6_part2_option1 = Option.new("Swim out to the ice flows to pet a walrus", "Against your better judgement, you leap into the frigid waters and try to swim out to the walruses.  
-
-This goes quite poorly.  
-
-In the icy water, your body quickly begins to shut down and you lose consciousness.  ", -1, true)
-var encounterB6_part2_option2 = Option.new("Admire the walruses from a distance", "You spend some time resting and drawing sketches of the glacier and walruses.  As you're preparing for the climb back up the glacier, a family of humpback whales breach amongst the ice flows.  ")
-var encounterB6_part2 = EncounterPart.new("After considerable effort, you've reached the waters below the glacier.  After a bit more searching, you find a large pod of over a hundred walruses lounging on the rocky shore and the ice flows", [encounterB6_part2_option1, encounterB6_part2_option2])
 
 var encounterB6 = Encounter.new("B6", [encounterB6_part1, encounterB6_part2])
 
