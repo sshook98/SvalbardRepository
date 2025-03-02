@@ -173,7 +173,7 @@ var encounterD3_part1 = EncounterPart.new("As you cut across a coastal valley, y
 var encounterD3_part2_option1 = Option.new("Head back to shore", "You leave the shipwreck behind, pondering the fates of those passeners suddenly thrust into Spitsbergen winter. ")
 var encounterD3_part2 = EncounterPart.new("The wooden poles are in fact three wooden ship masts.  Bits of frayed sail still clings to the masts, flappin lazily in the wind.  
 The ice is nearly crystal clear, and you can see the partially crushed hull of a ship below.  
-The ice around can shift quickly and unexpectedly, especially during a winter storm.  
+The ice around Svalbard can shift quickly and unexpectedly, especially during a winter storm.  
 It's likely the ship's passengers survived the wreck, but whether they would have made it back to civilization is less clear.  ", [encounterD3_part2_option1])
 
 var encounterD3 = Encounter.new("D3", [encounterD3_part1, encounterD3_part2])
