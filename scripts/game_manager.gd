@@ -323,6 +323,7 @@ func finish_encounter():
 	$RichTextLabel.newline()
 	await add_text_line("It's time to move on")
 	if are_all_enconters_complete():
+		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file("res://scenes/VictoryScreen.tscn")
 		
 	
