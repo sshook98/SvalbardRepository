@@ -9,4 +9,3 @@ var options: Array[Option]
 func _init(_prompt: String, _options: Array[Option]):
 	prompt = _prompt
 	options = _options
-

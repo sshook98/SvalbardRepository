@@ -130,10 +130,16 @@ var encounterB3_part1 = EncounterPart.new("Another day passes uneventfully.", [e
 var encounterB3 = Encounter.new("B3", [encounterB3_part1])
 
 # Encounter B4
-var encounterB4_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
-var encounterB4_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterB4_part1_option1])
+var encounterB4_part1_option1 = Option.new("Approach the miner", "The miner seems to be trying to communicate something with you. Maybe he’s lost? Hungry? Cold? ", 1)
+var encounterB4_part1_option2 = Option.new("Steer clear", "You wave and head off in a different direction. For now, best not to get too distracted. ")
+var encounterB4_part1 = EncounterPart.new("You see a coal miner in the distance. He waves and shouts a greeting at you in a language you don’t understand.", [encounterB4_part1_option1, encounterB4_part1_option2])
 
-var encounterB4 = Encounter.new("B4", [encounterB4_part1])
+var encounterB4_part2_option1 = Option.new("Give him directions to Longyearbyen by foot", "You pull out a map and mime the directions as best you can, pointing at things around you and then things on the map before tracing the route he’d need to go. He nods enthusiastically throughout. When you’re done, he reaches into his bag and pulls out some dried fish to hand to you before heading off in the direction you indicated. Gain 1 food")
+var encounterB4_part2_option2 = Option.new("Give him some food", "He claps you appreciatively on the shoulder before eating. You head your separate ways. Lose 1 food.")
+var encounterB4_part2_option3 = Option.new("Give him one of your extra hats", "He laughs and pulls out his own hat to show you. He waves again and heads off west towards the sea. Hopefully what he’s looking for is there.")
+var encounterB4_part2 = EncounterPart.new("", [encounterB4_part2_option1, encounterB4_part2_option2, encounterB4_part2_option3])
+
+var encounterB4 = Encounter.new("B4", [encounterB4_part1, encounterB4_part2])
 
 # Encounter B5
 var encounterB5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
@@ -220,14 +226,15 @@ var encounterD4_part4 = EncounterPart.new("The ragged breathing nears and you he
 var encounterD4 = Encounter.new("D4", [encounterD4_part1, encounterD4_part2, encounterD4_part3, encounterD4_part4])
 
 # Encounter D5
-var encounterD5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
-var encounterD5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterD5_part1_option1])
+var encounterD5_part1_option1 = Option.new("Set up camp", "You set up camp quickly. You finish right as the sun touches the horizon, bathing the land orange and red. You sit and appreciate the view.")
+var encounterD5_part1 = EncounterPart.new("The mountainous terrain has made your journey difficult. As you get to the top of the next mountain, you realize how late in the day it is.", [encounterD5_part1_option1])
 
 var encounterD5 = Encounter.new("D5", [encounterD5_part1])
 
 # Encounter D6
-var encounterD6_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
-var encounterD6_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterD6_part1_option1])
+var encounterD6_part1_option1 = Option.new("Decline", "You’ve been making your way ok so far, and his boat doesn’t look too sturdy. Best to keep going the way you have been.")
+var encounterD6_part1_option2 = Option.new("Accept", "Maybe a short tour will give you a better vantage point. You pay him his fee and get in the boat, making notes about the coast’s shape as your guide spins tall tales of adventuring parties and ship captains.")
+var encounterD6_part1 = EncounterPart.new("You’ve been picking your way around the coast for a while when you come across a small dock with a small boat attached. A man sits in the boat eating his lunch. He offers to take you on a short tour around the coast for a small fee.", [encounterD6_part1_option1, encounterD6_part1_option2])
 
 var encounterD6 = Encounter.new("D6", [encounterD6_part1])
 
@@ -246,10 +253,15 @@ var encounterE4_part2 = EncounterPart.new("The baloon shows considerable wear an
 var encounterE4 = Encounter.new("E4", [encounterE4_part1, encounterE4_part2])
 
 # Encounter E5
-var encounterE5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
-var encounterE5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterE5_part1_option1])
+var encounterE5_part1_option1 = Option.new("Ignore the birds", "You watch for just a moment before continuing on your way. No point getting distracted now.")
+var encounterE5_part1_option2 = Option.new("Follow the birds", "Curiosity gets the better of you. You follow the birds into a small alcove, where about 10 nests sit.", 1)
+var encounterE5_part1 = EncounterPart.new("A few seabirds weave in and out of view, ducking into an unseen outcropping up ahead.", [encounterE5_part1_option1, encounterE5_part1_option2])
 
-var encounterE5 = Encounter.new("E5", [encounterE5_part1])
+var encounter_part2_option1 = Option.new("Make a note of the location on your map", "You note down the location, along with a quick sketch of the birds you see.")
+var encounter_part2_option2 = Option.new("Try to grab an egg", "Fresh eggs are in short supply here; you have to take the chance while you have it. You watch for a while and find a nest that doesn’t seem to be tended to very often. You time your opening, then dart in and grab 2 of the 4 eggs in the nest. You make a clean getaway. Gain 2 food.")
+var encounterE5_part2 = EncounterPart.new("", [encounter_part2_option1, encounter_part2_option2])
+
+var encounterE5 = Encounter.new("E5", [encounterE5_part1, encounterE5_part2])
 
 
 var encounters = [encounterC1, encounterC2, encounterC3, encounterC4, encounterC5, encounterC6,
