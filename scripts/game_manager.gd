@@ -171,7 +171,7 @@ var encounterD3_part1_option2 = Option.new("Keep off the ice", "You continue acr
 var encounterD3_part1 = EncounterPart.new("As you cut across a coastal valley, you see large wooden poles peeking out the coastal ice.  The ice is solid, shifting only slightly in the afternoon tide.", [encounterD3_part1_option1, encounterD3_part1_option2])
 
 var encounterD3_part2_option1 = Option.new("Head back to shore", "You leave the shipwreck behind, pondering the fates of those passeners suddenly thrust into Spitsbergen winter. ")
-var encounterD3_part2 = EncounterPart.new("The wooden poles are in fact three wooden ship masts.  Bits of frayed sail still clings to the masts, flappin lazily in the wind.  
+var encounterD3_part2 = EncounterPart.new("The wooden poles are in fact three wooden ship masts.  Bits of frayed sail still clings to the masts, flapping lazily in the wind.  
 The ice is nearly crystal clear, and you can see the partially crushed hull of a ship below.  
 The ice around Svalbard can shift quickly and unexpectedly, especially during a winter storm.  
 It's likely the ship's passengers survived the wreck, but whether they would have made it back to civilization is less clear.  ", [encounterD3_part2_option1])
