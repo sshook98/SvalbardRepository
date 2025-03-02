@@ -52,6 +52,7 @@ vertical_alignment = 1
 [node name="Node" type="Node" parent="."]
 script = ExtResource("2_safp2")
 
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 offset_left = 568.0
@@ -60,3 +61,19 @@ offset_right = 5368.0
 offset_bottom = 2764.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_jr7u8")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.5
+offset_top = -23.0
+offset_right = 154.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "A Game By Kelsey, Sabrina, and Spencer"
+
