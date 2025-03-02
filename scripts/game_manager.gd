@@ -58,24 +58,16 @@ var encounterC3_part2 = EncounterPart.new("You come across an outcropping of coa
 var encounterC3 = Encounter.new("C3", [encounterC3_part1, encounterC3_part2])
 
 # Encounter C4
-var encounterC4_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterC4_part1 = EncounterPart.new("test prompt 3", [encounterC4_part1_option1])
+var encounterC4_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterC4_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterC4_part1_option1])
 
-var encounterC4_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterC4_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterC4_part2 = EncounterPart.new("test prompt 4", [encounterC4_part2_option1, encounterC4_part2_option2])
-
-var encounterC4 = Encounter.new("C4", [encounterC4_part1, encounterC4_part2])
+var encounterC4 = Encounter.new("C4", [encounterC4_part1])
 
 # Encounter C5
-var encounterC5_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterC5_part1 = EncounterPart.new("test prompt 3", [encounterC5_part1_option1])
+var encounterC5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterC5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterC5_part1_option1])
 
-var encounterC5_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterC5_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterC5_part2 = EncounterPart.new("test prompt 4", [encounterC5_part2_option1, encounterC5_part2_option2])
-
-var encounterC5 = Encounter.new("C5", [encounterC5_part1, encounterC5_part2])
+var encounterC5 = Encounter.new("C5", [encounterC5_part1])
 
 # Encounter C6
 var encounterC6_part1_option1 = Option.new("Search for walruses down the coast", "You look for a path down the glacier to the coast, carefully making your way across the icy crevices until you reach a less steep portion of the coastal cliffs.  You make your way down the rocky path until you reach the frigid waters.", 1)
@@ -94,14 +86,10 @@ var encounterC6 = Encounter.new("C6", [encounterC6_part1, encounterC6_part2])
 
 
 # Encounter A4
-var encounterA4_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterA4_part1 = EncounterPart.new("test prompt 3", [encounterA4_part1_option1])
+var encounterA4_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterA4_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterA4_part1_option1])
 
-var encounterA4_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterA4_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterA4_part2 = EncounterPart.new("test prompt 4", [encounterA4_part2_option1, encounterA4_part2_option2])
-
-var encounterA4 = Encounter.new("A4", [encounterA4_part1, encounterA4_part2])
+var encounterA4 = Encounter.new("A4", [encounterA4_part1])
 
 # Encounter A5
 var encounterA5_part1_option1 = Option.new("Setup your tent", "You set your tent up immediately not waiting for the snow to start", 1)
@@ -129,44 +117,29 @@ var encounterA5_part4 = EncounterPart.new("You awake with a headache, slight nau
 var encounterA5 = Encounter.new("A5", [encounterA5_part1, encounterA5_part2, encounterA5_part3, encounterA5_part4])
 
 # Encounter B2
-var encounterB2_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB2_part1 = EncounterPart.new("test prompt 3", [encounterB2_part1_option1])
+var encounterB2_part1_option1 = Option.new("Join in the fun", "You chase the ringed seals, throwing your arms up and hollering loudly. You and the cub have fun. Mama polar bear is not amused. ")
+var encounterB2_part1_option2 = Option.new("Observe from afar", "The cub continues to play for a bit, until mama polar bear returns from a successful hunt.")
+var encounterB2_part1 = EncounterPart.new("As you map the arctic tundra of the southwest coast of Spitsbergen, you come across a polar bear cub playfully chasing ringed seals.", [encounterB2_part1_option1, encounterB2_part1_option2])
 
-var encounterB2_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB2_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB2_part2 = EncounterPart.new("test prompt 4", [encounterB2_part2_option1, encounterB2_part2_option2])
-
-var encounterB2 = Encounter.new("B2", [encounterB2_part1, encounterB2_part2])
+var encounterB2 = Encounter.new("B2", [encounterB2_part1])
 
 # Encounter B3
-var encounterB3_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB3_part1 = EncounterPart.new("test prompt 3", [encounterB3_part1_option1])
+var encounterB3_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterB3_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterB3_part1_option1])
 
-var encounterB3_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB3_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB3_part2 = EncounterPart.new("test prompt 4", [encounterB3_part2_option1, encounterB3_part2_option2])
-
-var encounterB3 = Encounter.new("B3", [encounterB3_part1, encounterB3_part2])
+var encounterB3 = Encounter.new("B3", [encounterB3_part1])
 
 # Encounter B4
-var encounterB4_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB4_part1 = EncounterPart.new("test prompt 3", [encounterB4_part1_option1])
+var encounterB4_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterB4_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterB4_part1_option1])
 
-var encounterB4_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB4_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB4_part2 = EncounterPart.new("test prompt 4", [encounterB4_part2_option1, encounterB4_part2_option2])
-
-var encounterB4 = Encounter.new("B4", [encounterB4_part1, encounterB4_part2])
+var encounterB4 = Encounter.new("B4", [encounterB4_part1])
 
 # Encounter B5
-var encounterB5_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterB5_part1 = EncounterPart.new("test prompt 3", [encounterB5_part1_option1])
+var encounterB5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue. ")
+var encounterB5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterB5_part1_option1])
 
-var encounterB5_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterB5_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterB5_part2 = EncounterPart.new("test prompt 4", [encounterB5_part2_option1, encounterB5_part2_option2])
-
-var encounterB5 = Encounter.new("B5", [encounterB5_part1, encounterB5_part2])
+var encounterB5 = Encounter.new("B5", [encounterB5_part1])
 
 # Encounter B6
 var encounterB6_part1_option1 = Option.new("Test the water temperature", "You find that the temperature is quite suitable for swimming.", 1)
@@ -247,24 +220,16 @@ var encounterD4_part4 = EncounterPart.new("The ragged breathing nears and you he
 var encounterD4 = Encounter.new("D4", [encounterD4_part1, encounterD4_part2, encounterD4_part3, encounterD4_part4])
 
 # Encounter D5
-var encounterD5_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterD5_part1 = EncounterPart.new("test prompt 3", [encounterD5_part1_option1])
+var encounterD5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
+var encounterD5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterD5_part1_option1])
 
-var encounterD5_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterD5_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterD5_part2 = EncounterPart.new("test prompt 4", [encounterD5_part2_option1, encounterD5_part2_option2])
-
-var encounterD5 = Encounter.new("D5", [encounterD5_part1, encounterD5_part2])
+var encounterD5 = Encounter.new("D5", [encounterD5_part1])
 
 # Encounter D6
-var encounterD6_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterD6_part1 = EncounterPart.new("test prompt 3", [encounterD6_part1_option1])
+var encounterD6_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
+var encounterD6_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterD6_part1_option1])
 
-var encounterD6_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterD6_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterD6_part2 = EncounterPart.new("test prompt 4", [encounterD6_part2_option1, encounterD6_part2_option2])
-
-var encounterD6 = Encounter.new("D6", [encounterD6_part1, encounterD6_part2])
+var encounterD6 = Encounter.new("D6", [encounterD6_part1])
 
 # Encounter E4
 var encounterE4_part1_option1 = Option.new("Investiate the balloon", "You approach the balloon and examine the area", 1)
@@ -281,14 +246,10 @@ var encounterE4_part2 = EncounterPart.new("The baloon shows considerable wear an
 var encounterE4 = Encounter.new("E4", [encounterE4_part1, encounterE4_part2])
 
 # Encounter E5
-var encounterE5_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterE5_part1 = EncounterPart.new("test prompt 3", [encounterE5_part1_option1])
+var encounterE5_part1_option1 = Option.new("Continue", "You map the surrounding area and continue.")
+var encounterE5_part1 = EncounterPart.new("Another day passes uneventfully.", [encounterE5_part1_option1])
 
-var encounterE5_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterE5_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterE5_part2 = EncounterPart.new("test prompt 4", [encounterE5_part2_option1, encounterE5_part2_option2])
-
-var encounterE5 = Encounter.new("E5", [encounterE5_part1, encounterE5_part2])
+var encounterE5 = Encounter.new("E5", [encounterE5_part1])
 
 
 var encounters = [encounterC1, encounterC2, encounterC3, encounterC4, encounterC5, encounterC6,
