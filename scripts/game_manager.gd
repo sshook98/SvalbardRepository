@@ -179,14 +179,18 @@ var encounterB6_part2 = EncounterPart.new("test prompt 4", [encounterB6_part2_op
 var encounterB6 = Encounter.new("B6", [encounterB6_part1, encounterB6_part2])
 
 # Encounter D2
-var encounterD2_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterD2_part1 = EncounterPart.new("test prompt 3", [encounterD2_part1_option1])
+var encounterD2_part1_option1 = Option.new("Investigate the hole", "Looking closer, you hypothesize that this hole was dug by a small mammal. It's big enough to peer inside but you’ll need to get closer. ", 1)
+var encounterD2_part1_option2 = Option.new("Keep moving towards the cliff edge", "The sounds of seabirds grow louder and louder as you approach the edge of the cliff. Once you reach the top, you find that a section of the cliff face is shaped into rows of shelves made of natural stone. Settled among the shelves are numerous birds nestled in nests that seem to precariously protrude out from the cliff and over the crystal blue sea. Although the screeching is irritating, you make quick work of surveying the cliffside. ")
+var encounterD2_part1 = EncounterPart.new("While navigating your way upslope to the coastal cliffs, you spot a boulder formation with a small hole in the ground.", [encounterD2_part1_option1, encounterD2_part1_option2])
 
-var encounterD2_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterD2_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterD2_part2 = EncounterPart.new("test prompt 4", [encounterD2_part2_option1, encounterD2_part2_option2])
+var encounterD2_part2_option1 = Option.new("Stick your face in the hole", "You set down your supplies and lean them against the boulder. Alright, guess you’re actually doing this. The first thing you notice is the gag inducing smell. In the corner of the den you find some dead birds in a mangled state. The den is otherwise empty. Although, you do hear something behind you- chittering. You pull back to see your favorite fox with one of your spare shoes on its head. Before you recover from the smell of the den, the fox has already run wildly to the north and out of sight, along with its new hat. ", 2)
+var encounterD2_part2_option2 = Option.new("Yeah, maybe not", "You think better of it. Who goes around sticking their face in random holes anyway? ", 2)
+var encounterD2_part2 = EncounterPart.new("", [encounterD2_part2_option1, encounterD2_part2_option2])
 
-var encounterD2 = Encounter.new("D2", [encounterD2_part1, encounterD2_part2])
+var encounterD2_part3_option1 = Option.new("Gather yourself and continue up to the cliff", "The sounds of seabirds grow louder and louder as you approach the edge of the cliff. Once you reach the top, you find that a section of the cliff face is shaped into rows of shelves made of natural stone. Settled among the shelves are numerous birds nestled in nests that seem to precariously protrude out from the cliff and over the crystal blue sea. Although the screeching is irritating, you make quick work of surveying the cliffside. ",)
+var encounterD2_part3 = EncounterPart.new("", [encounterD2_part3_option1])
+
+var encounterD2 = Encounter.new("D2", [encounterD2_part1, encounterD2_part2, encounterD2_part3])
 
 # Encounter D3
 var encounterD3_part1_option1 = Option.new("Examine the wooden poles more closely", "You make your way onto the ice and out towards the wooden poles.  ", 1)
