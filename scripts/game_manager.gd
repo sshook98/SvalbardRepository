@@ -117,7 +117,7 @@ var encounterA5_part4 = EncounterPart.new("You awake with a headache, slight nau
 var encounterA5 = Encounter.new("A5", [encounterA5_part1, encounterA5_part2, encounterA5_part3, encounterA5_part4])
 
 # Encounter B2
-var encounterB2_part1_option1 = Option.new("Join in the fun", "You chase the ringed seals, throwing your arms up and hollering loudly. You and the cub have fun. Mama polar bear is not amused. ")
+var encounterB2_part1_option1 = Option.new("Join in the fun", "You chase the ringed seals, throwing your arms up and hollering loudly. You and the cub have fun. Mama polar bear is not amused. ", -1, true, "polar_bear")
 var encounterB2_part1_option2 = Option.new("Observe from afar", "The cub continues to play for a bit, until mama polar bear returns from a successful hunt.")
 var encounterB2_part1 = EncounterPart.new("As you map the arctic tundra of the southwest coast of Spitsbergen, you come across a polar bear cub playfully chasing ringed seals.", [encounterB2_part1_option1, encounterB2_part1_option2])
 
