@@ -52,7 +52,7 @@ var encounterC3_part1_option2 = Option.new("Venture into to town", " You venture
 var encounterC3_part1 = EncounterPart.new("You approach Longyearbyen, one of the only permanent settlements in Svalbard.  This area has already been explored pretty thoroughly so it may be good to take some time to rest in town, but the resources here are also some of the richest on the island.  It'd may be good to take another look.  ", [encounterC3_part1_option1, encounterC3_part1_option2])
 
 var encounterC3_part2_option1 = Option.new("Be thorough, catalog all of the outcroppings in the area and take some samples as well", "You spend the next two days making through topological maps of the area and documenting the locations of each coal outcropping you find.  You take soil samples from some of the glacial rivers until you're nearly out of sample bags.  ")
-var encounterC3_part2_option2 = Option.new("Be quick, Splitsbergen is a large place and the SNSK probably already has good data on this area.  ", "You make some quick sketches of this area's topology to compare against the SNSK's data later.  ")
+var encounterC3_part2_option2 = Option.new("Be quick, Spitsbergen is a large place and the SNSK probably already has good data on this area.  ", "You make some quick sketches of this area's topology to compare against the SNSK's data later.  ")
 var encounterC3_part2 = EncounterPart.new("You come across an outcropping of coal in the hills near Longyearbyen.  There may be more outcroppings nearby to indicate a rich vein.  You could spend some time to sketch especially detailed topology of this area, but it will take some time", [encounterC3_part2_option1, encounterC3_part2_option2])
 
 var encounterC3 = Encounter.new("C3", [encounterC3_part1, encounterC3_part2])
@@ -106,7 +106,7 @@ var encounterA4 = Encounter.new("A4", [encounterA4_part1, encounterA4_part2])
 # Encounter A5
 var encounterA5_part1_option1 = Option.new("Setup your tent", "You set your tent up immediately not waiting for the snow to start", 1)
 var encounterA5_part1_option2 = Option.new("Search for a cave to shelter in", "You trek up into the hills in search of a cave or an alcove to take shelter from the snow", 2)
-var encounterA5_part1 = EncounterPart.new("As you venture out towards the northwest reaches of Splitsbergen, the weather suddenly takes a turn for the worse.  Heavy storm clouds approach from the south and soon, the whole peninsula will have a fresh coat of snow.", [encounterA5_part1_option1, encounterA5_part1_option2])
+var encounterA5_part1 = EncounterPart.new("As you venture out towards the northwest reaches of Spitsbergen, the weather suddenly takes a turn for the worse.  Heavy storm clouds approach from the south and soon, the whole peninsula will have a fresh coat of snow.", [encounterA5_part1_option1, encounterA5_part1_option2])
 
 var encounterA5_part2_option1 = Option.new("Ride out the storm inside the tent", "The snow continues piling up, but you remain warm and comfy inside your tent as you begin to nod off", 3)
 var encounterA5_part2_option2 = Option.new("Dig through the snow to check outside", "You spend some time to dig a trench through the newly fallen snow until you reach the surface.  You find that the snow has nearly stopped and you should be good to venture out tomorrow morning.  ")
@@ -197,7 +197,7 @@ var encounterD3_part1_option1 = Option.new("Examine the wooden poles more closel
 var encounterD3_part1_option2 = Option.new("Keep off the ice", "You continue across te coastal valley and focus on your cartography")
 var encounterD3_part1 = EncounterPart.new("As you cut across a coastal valley, you see large wooden poles peeking out the coastal ice.  The ice is solid, shifting only slightly in the afternoon tide.", [encounterD3_part1_option1, encounterD3_part1_option2])
 
-var encounterD3_part2_option1 = Option.new("Head back to shore", "You leave the shipwreck behind, pondering the fates of those passeners suddenly thrust into Splitsbergen winter. ")
+var encounterD3_part2_option1 = Option.new("Head back to shore", "You leave the shipwreck behind, pondering the fates of those passeners suddenly thrust into Spitsbergen winter. ")
 var encounterD3_part2 = EncounterPart.new("The wooden poles are in fact three wooden ship masts.  Bits of frayed sail still clings to the masts, flappin lazily in the wind.  
 The ice is nearly crystal clear, and you can see the partially crushed hull of a ship below.  
 The ice around can shift quickly and unexpectedly, especially during a winter storm.  
