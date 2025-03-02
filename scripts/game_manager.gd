@@ -189,12 +189,16 @@ var encounterD2_part2 = EncounterPart.new("test prompt 4", [encounterD2_part2_op
 var encounterD2 = Encounter.new("D2", [encounterD2_part1, encounterD2_part2])
 
 # Encounter D3
-var encounterD3_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterD3_part1 = EncounterPart.new("test prompt 3", [encounterD3_part1_option1])
+var encounterD3_part1_option1 = Option.new("Examine the wooden poles more closely", "You make your way onto the ice and out towards the wooden poles.  ", 1)
+var encounterD3_part1_option2 = Option.new("Keep off the ice", "You continue across te coastal valley and focus on your cartography")
+var encounterD3_part1 = EncounterPart.new("As you cut across a coastal valley, you see large wooden poles peeking out the coastal ice.  The ice is solid, shifting only slightly in the afternoon tide.", [encounterD3_part1_option1, encounterD3_part1_option2])
 
 var encounterD3_part2_option1 = Option.new("test action 5", "test result 5")
 var encounterD3_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterD3_part2 = EncounterPart.new("test prompt 4", [encounterD3_part2_option1, encounterD3_part2_option2])
+var encounterD3_part2 = EncounterPart.new("The wooden poles are in fact three wooden ship masts.  Bits of frayed sail still clings to the masts, flappin lazily in the wind.  
+The ice is nearly crystal clear, and you can see the partially crushed hull of a ship below.  
+The ice around can shift quickly and unexpectedly, especially during a winter storm.  
+It's likely the ship's passengers survived the wreck, but whether they would have made it back to civilization is less clear.  ", [encounterD3_part2_option1, encounterD3_part2_option2])
 
 var encounterD3 = Encounter.new("D3", [encounterD3_part1, encounterD3_part2])
 
