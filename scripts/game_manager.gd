@@ -48,7 +48,7 @@ var encounterC2 = Encounter.new("C2", [encounterC2_part1, encounterC2_part2, enc
 
 # Encounter C3
 var encounterC3_part1_option1 = Option.new("Explore the outskirts", "You explore the outskirts of the Longyearbyen looking for signs of resources buried under the ice and stone.  ", 1)
-var encounterC3_part1_option2 = Option.new("Venture into to town", " You venture into town and take rest a bit before heading on your way again.  ")
+var encounterC3_part1_option2 = Option.new("Venture into town", " You venture into town and take rest a bit before heading on your way again.  ")
 var encounterC3_part1 = EncounterPart.new("You approach Longyearbyen, one of the only permanent settlements in Svalbard.  This area has already been explored pretty thoroughly so it may be good to take some time to rest in town, but the resources here are also some of the richest on the island.  It'd may be good to take another look.  ", [encounterC3_part1_option1, encounterC3_part1_option2])
 
 var encounterC3_part2_option1 = Option.new("Be thorough, catalog all of the outcroppings in the area and take some samples as well", "You spend the next two days making through topological maps of the area and documenting the locations of each coal outcropping you find.  You take soil samples from some of the glacial rivers until you're nearly out of sample bags.  ")
@@ -267,7 +267,9 @@ var encounterE5 = Encounter.new("E5", [encounterE5_part1, encounterE5_part2])
 var encounters = [encounterC1, encounterC2, encounterC3, encounterC4, encounterC5, encounterC6,
 encounterA4, encounterA5, encounterB2, encounterB3, encounterB4, encounterB5, encounterB6,
 encounterD2, encounterD3, encounterD4, encounterD5, encounterD6, encounterE4, encounterE5]
+
 var current_encounter = encounters[0]
+
 
 var letter_to_number_dict = {
 	"A": 1,
