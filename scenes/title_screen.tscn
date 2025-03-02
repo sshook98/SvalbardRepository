@@ -52,7 +52,6 @@ vertical_alignment = 1
 [node name="Node" type="Node" parent="."]
 script = ExtResource("2_safp2")
 
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 offset_left = 568.0
@@ -76,4 +75,3 @@ offset_right = 154.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "A Game By Kelsey, Sabrina, and Spencer"
-
