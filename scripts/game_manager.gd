@@ -446,22 +446,22 @@ func scroll_text_to_bottom():
 	
 func move_up():
 	print("trying to move up from " + str(player_pos))
-	await try_move(Vector2i(0, 1))
+	await try_move(Vector2i(0, 1), "north")
 
 func move_down():
 	print("trying to move down from " + str(player_pos))
-	await try_move(Vector2i(0, -1))
+	await try_move(Vector2i(0, -1), "south")
 
 func move_left():
 	print("trying to move left from " + str(player_pos))
-	await try_move(Vector2i(-1, 0))
+	await try_move(Vector2i(-1, 0), "west")
 	
 func move_right():
 	print("trying to move right from " + str(player_pos))
-	await try_move(Vector2i(1, 0))
+	await try_move(Vector2i(1, 0), "east")
 
 	
-func try_move(pos_change):
+func try_move(pos_change, move_dir):
 	var old_pos = player_pos
 	var pos_vector = position_name_to_vector(player_pos)
 	var new_pos = pos_vector + pos_change
@@ -469,7 +469,7 @@ func try_move(pos_change):
 	if is_position_valid(new_pos_name):
 		player_pos = new_pos_name
 		print("Moving from", old_pos, " to ", player_pos)
-		await add_text_line("Moving from " + str(old_pos) + " to " + str(new_pos_name))
+		await add_text_line("Moving " + move_dir)
 		update_dot_position()
 		await get_tree().create_timer(1).timeout
 		current_encounter = get_next_encounter()
@@ -480,8 +480,8 @@ func try_move(pos_change):
 		else:
 			print(current_encounter.map_pos)
 	else:
-		await add_text_line("Cannot move to " + str(new_pos_name))
-		print("Cannot move to ", new_pos_name)
+		await add_text_line("Cannot move " + move_dir)
+		print("Cannot move " + move_dir + " to ", new_pos_name)
 	
 func is_position_valid(pos):
 	return valid_positions.has(pos)
