@@ -16,14 +16,35 @@ var encounterC1_part2 = EncounterPart.new("You spend the day taking samples and 
 var encounterC1 = Encounter.new("C1", [encounterC1_part1, encounterC1_part2])
 
 # Encounter C2
-var encounterC2_part1_option1 = Option.new("test action 4", "test result 4", 1)
-var encounterC2_part1 = EncounterPart.new("test prompt 3", [encounterC2_part1_option1])
+var encounterC2_part1_option1 = Option.new("Take it all in", "You set your heavy bags down and meet the ground. Still a bit out of breath from the hike, you lie back and admire your surroundings. ", 1)
+var encounterC2_part1_option2 = Option.new("Keep going, there's much to do", "As you descend the hill, you see a flicker of movement in the corner of your eye. You stop in your tracks as you find an arctic fox staring back at you from twenty paces. ", 7)
+var encounterC2_part1 = EncounterPart.new("As you trek up a steep rocky hill, the breathtaking landscape of Spitsbergen opens up all around you.", [encounterC2_part1_option1, encounterC2_part1_option2])
 
-var encounterC2_part2_option1 = Option.new("test action 5", "test result 5")
-var encounterC2_part2_option2 = Option.new("test action 6", "test result 6")
-var encounterC2_part2 = EncounterPart.new("test prompt 4", [encounterC2_part2_option1, encounterC2_part2_option2])
+var encounterC2_part2_option1 = Option.new("Look to the North", "A column of smoke catches your attention again. Your eyes follow it down to what looks like a small settlement nestled along the coast. ", 2)
+var encounterC2_part2 = EncounterPart.new("", [encounterC2_part2_option1])
 
-var encounterC2 = Encounter.new("C2", [encounterC2_part1, encounterC2_part2])
+var encounterC2_part3_option1 = Option.new("Look to the West", "The western landscape is covered in large adjoining glaciers, occasionally broken up by surrounding mountain peaks. Along the coast, the glaciers seem to split and shed parts of themselves to the sea. ", 3)
+var encounterC2_part3 = EncounterPart.new("", [encounterC2_part3_option1])
+
+var encounterC2_part4_option1 = Option.new("Look to the East", "Tall and rocky cliffs extend to the east, where you see large gatherings of feathery seabirds littering the sky.  ", 4)
+var encounterC2_part4 = EncounterPart.new("", [encounterC2_part4_option1])
+
+var encounterC2_part5_option1 = Option.new("Look up", "Fluffy clouds roam across the blue sky above you. You watch them shift as the warm sun hits your face, and suddenly, your eyelids begin to droop.. And you feel yourself drifting off to sleep. That is- until you hear a small chitter from behind you. You look over and find an arctic fox rustling through the contents of your bag!  ", 5)
+var encounterC2_part5 = EncounterPart.new("", [encounterC2_part5_option1])
+
+var encounterC2_part6_option1 = Option.new("Shoo it away", "As soon as you get up, the fox books it towards the cliffs! You can see one of your rations being carried away in its mouth as it sprints away. Everything else in your bag seems fine, but it seems like your relaxation time is over. ")
+var encounterC2_part6_option2 = Option.new("Watch the fox", " You watch the fox intently, being careful not to make any sudden movement or sounds. It has a small body covered with a thick and extremely fluffy white and yellowish coat. Its snout is short along with its rounded ears. It suddenly stops rummaging, and meets eyes with yours. Its left eye is an icy blue and it's right is a deep brown. Realizing it has an audience, the fox books it towards the cliffs! You can see one of your rations being carried away in its mouth as it sprints away. It seems like your relaxation time is over. ")
+var encounterC2_part6 = EncounterPart.new("", [encounterC2_part6_option1, encounterC2_part6_option2])
+
+var encounterC2_part7_option1 = Option.new("Shoo it away", "As soon as you move, the fox sprints towards the east! Good thing your guard was up, you know those critters can be extremely sly. You continue on your way. ")
+var encounterC2_part7_option2 = Option.new("Watch the fox", "You watch the fox intently, being careful not to make any sudden movement or sounds. Its eyes meet with yours, and you see its left eye is an icy blue and it's right is a deep brown. It has a small body covered with a thick and extremely fluffy white and yellowish coat. Its snout is short along with its rounded ears. ", 8)
+var encounterC2_part7 = EncounterPart.new("", [encounterC2_part7_option1, encounterC2_part7_option2])
+
+var encounterC2_part8_option1 = Option.new("Give it one of your rations", "As soon as you move your hands toward your bag, the fox sprints towards the east. Well, you at least tried. It seems it's time to continue on your way. ")
+var encounterC2_part8_option2 = Option.new("Continue on", "As soon as you start moving again, the fox sprints towards the east. You continue on your way. ")
+var encounterC2_part8 = EncounterPart.new("", [encounterC2_part8_option1, encounterC2_part8_option2])
+
+var encounterC2 = Encounter.new("C2", [encounterC2_part1, encounterC2_part2, encounterC2_part3, encounterC2_part4, encounterC2_part5, encounterC2_part6, encounterC2_part7, encounterC2_part8])
 
 # Encounter C3
 var encounterC3_part1_option1 = Option.new("Explore the outskirts", "You explore the outskirts of the Longyearbyen looking for signs of resources buried under the ice and stone.  ", 1)
